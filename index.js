@@ -7,7 +7,8 @@ const app = express();
 app.use(express.static('./public'));
 
 app.get('/api/prices', (req, res)=>{
-    res.json("./public/api/prices.json")
+    const data = require('./public/api/prices.json')
+    res.json(data);
 });
 
 
