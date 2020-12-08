@@ -1,0 +1,22 @@
+{
+  "name": "gods-pencil-co",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slightly-Useful-Inc/gods-pencil-co.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Slightly-Useful-Inc/gods-pencil-co/issues"
+  },
+  "homepage": "https://github.com/Slightly-Useful-Inc/gods-pencil-co#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
