@@ -8,12 +8,12 @@ app.use(express.static('./public'));
 
 app.get('/api/prices', (req, res)=>{
     const data = require('./public/api/prices.json')
-    res.json(JSON.stringify(data));
+    res.json(data);
 });
 
 app.get('/api/staff', (req, res)=>{
     const data = require('./public/api/staff.json')
-    res.json(JSON.stringify(data));
+    res.json(data);
 })
 
 
