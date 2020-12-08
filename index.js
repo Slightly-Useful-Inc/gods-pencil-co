@@ -11,5 +11,10 @@ app.get('/api/prices', (req, res)=>{
     res.json(data);
 });
 
+app.get('/api/staff', (req, res)=>{
+    const data = require('./public/api/staff.json')
+    res.json(data);
+})
+
 
 app.listen(port);
