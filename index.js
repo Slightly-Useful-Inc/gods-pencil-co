@@ -16,5 +16,9 @@ app.get('/api/staff', (req, res)=>{
     res.json(data);
 })
 
+app.get('/api/staff/:name', (req, res)=>{
+    const data = require(`./public/api/${req.params.name}.json`)
+    res.json(data);
+})
 
 app.listen(port);
