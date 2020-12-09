@@ -1,5 +1,9 @@
-const server = require('./server')
+const express = require('express')
+const server = require('./webServer')
+const api = require('./api');
+const app = express();
 
-
-let myServer = new server.Server(process.env.PORT || 3000);
-myServer.startServer();
+let godsServer = new server.Server(process.env.PORT || 3000, app);
+let godsAPI = new api.API(app);
+godsAPI.startAPI();
+godsServer.startServer();
