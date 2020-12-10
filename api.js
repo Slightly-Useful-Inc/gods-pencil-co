@@ -1,6 +1,6 @@
 const express = require('express')
 const path = require('path')
-
+const fs = require('fs')
 
 class API{
 
@@ -28,11 +28,12 @@ class API{
         
         //Auth Calls
         this.app.get('/auth/admin/:token', (req, res)=>{
-            if (req.params.token == "test"){
+            let rawData = fs.readFileSync('./data/token.json');
+            let token = JSON.parse(rawData);
+            if (req.params.token == token["token"]){
                 res.redirect('../../admin/')
-            }
-            else{
-                res.sendStatus(403)
+            } else{
+                res.send(403)
             }
         })
 
